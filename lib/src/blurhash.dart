@@ -151,7 +151,7 @@ class BlurHash {
   Image toImage(int width, int height) {
     assert(width > 0);
     assert(height > 0);
-    final data = _transform(width, height, components);
+    final data = transform(width, height, components);
     return Image.fromBytes(width, height, data, format: Format.rgba);
   }
 }
@@ -250,7 +250,7 @@ List<List<ColorTriplet>> _multiplyPunch(
   return components;
 }
 
-Uint8List _transform(
+Uint8List transform(
   int width,
   int height,
   List<List<ColorTriplet>> components,
